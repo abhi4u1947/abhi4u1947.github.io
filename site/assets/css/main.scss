@@ -609,26 +609,13 @@ li { margin-bottom: 0.4em; }
 }
 .about-intro { max-width: 40rem; }
 .about-intro p { margin-bottom: 1.25em; }
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2.5rem 3rem;
-  margin-top: 3rem;
-}
-.about-grid h2 {
-  margin-top: 0;
-  font-size: 1.375rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--rule);
-}
-.about-grid ul { padding-left: 1.1rem; }
-.about-grid li { margin-bottom: 0.6em; }
-.about-grid section { font-size: 0.9875rem; }
 .about-full {
   margin-top: 3rem;
   max-width: 40rem;
 }
 .about-full h2 { font-size: 1.625rem; }
+.about-full ul { padding-left: 1.1rem; }
+.about-full li { margin-bottom: 0.6em; }
 
 /* === RESUME === */
 .resume {
