@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-meta">Notes &amp; tutorials</div>
+    <h2 class="hero-tagline">{{ site.tagline }}</h2>
+    <div class="topics-strip">
+      <span>Platform Engineering</span>
+      <span>DevSecOps</span>
+      <span>IAM &amp; Identity</span>
+      <span>Software Supply Chain</span>
+      <span>Cloud-Native Architecture</span>
+      <span>Observability</span>
+      <span>Agentic AI</span>
+    </div>
+  </div>
+</section>
+
+<section class="post-list">
+  <div class="wrap">
+    <div class="post-list-header">Recent posts</div>
+    {% for post in site.posts limit:5 %}
+    <article class="post-item">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        {% if post.tags %}<div class="tag">{{ post.tags | first }}</div>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+    <div class="all-posts-link">
+      <a href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="external-writing">
+  <div class="wrap">
+    <div class="post-list-header">Selected writing elsewhere</div>
+    <ul class="external-list">
+      <!-- TODO: verify exact article title -->
+      <li>
+        <a href="https://www.linkedin.com/posts/dadhichabhishek_agentic-ai-architecture-systems-that-think-ugcPost-7436119752307032064-gBH0/" rel="noopener">Agentic AI architecture: systems that think</a>
+        <span class="external-source">LinkedIn &middot; 2025</span>
+      </li>
+      <!-- TODO: verify exact article title -->
+      <li>
+        <a href="https://www.linkedin.com/pulse/national-institute-standards-technology-nist-has-released-dadhich-d3lif/" rel="noopener">NIST's post-quantum cryptography standards: what it means for platform teams</a>
+        <span class="external-source">LinkedIn Pulse &middot; 2024</span>
+      </li>
+      <!-- TODO: verify exact article title -->
+      <li>
+        <a href="https://www.linkedin.com/posts/dadhichabhishek_service-mesh-proxy-models-nist-sp-800-233-ugcPost-7281073197339279360-D6at/" rel="noopener">Service mesh proxy models and NIST SP 800-233</a>
+        <span class="external-source">LinkedIn &middot; 2024</span>
+      </li>
+    </ul>
+  </div>
+</section>

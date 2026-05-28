@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(direnv --version)",
+      "Bash(npm view *)",
+      "Bash(npm search *)"
+    ]
+  }
+}

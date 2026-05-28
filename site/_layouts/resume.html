@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="resume">
+  <header class="resume-header">
+    <div>
+      <h1>{{ site.author }}</h1>
+      <div class="resume-role">{{ site.role | default: "Cloud, Platform &amp; Security Architect" }}</div>
+    </div>
+    <div class="resume-contact">
+      {% if site.location %}<div>{{ site.location }}</div>{% endif %}
+      {% if site.phone %}<div>{{ site.phone }}</div>{% endif %}
+      <div><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+      <div><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">linkedin.com/in/{{ site.linkedin_username }}</a></div>
+      <a class="resume-download" href="{{ '/assets/abhishek-dadhich-resume.pdf' | relative_url }}" download>Download PDF</a>
+    </div>
+  </header>
+
+  {{ content }}
+</article>

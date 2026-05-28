@@ -1,0 +1,48 @@
+# Site identity
+title: "Abhishek Dadhich"
+tagline: "A cloud, platform, and security architect writing about how large systems actually get built, secured, and adopted."
+author: "Abhishek Dadhich"
+role: "Principal Architect · Platform Engineering · DevSecOps"
+location: "Pune, India"
+email: "abhi4u1947@gmail.com"
+phone: ""
+description: >
+  Architect and technology leader with 20 years building large-scale, business-critical systems.
+  Writing on platform engineering, DevSecOps, IAM, supply chain security, observability,
+  and agentic AI from a practitioner's perspective.
+
+url: "https://abhi4u1947.github.io"
+baseurl: "/"
+
+# Social
+github_username: "abhi4u1947"
+twitter_username: "abhi4u1947"
+linkedin_username: "dadhichabhishek"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:title/
+paginate: 10
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - PLAN.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

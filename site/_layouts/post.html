@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-hero">
+    <div class="wrap">
+      {% if page.kicker %}<div class="kicker">{{ page.kicker }}</div>{% endif %}
+      <h1>{{ page.title }}</h1>
+      <div class="meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        <span>{{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+      </div>
+    </div>
+  </header>
+
+  {% if page.image %}
+  <div class="wrap">
+    <img class="post-cover" src="{{ page.image | relative_url }}" alt="" loading="lazy" width="1200" height="1500">
+  </div>
+  {% endif %}
+
+  <div class="post-layout wrap">
+    <aside class="post-rail">
+      <div class="rail-block">
+        <div class="rail-label">Published</div>
+        <div class="rail-value">{{ page.date | date: "%b %-d, %Y" }}</div>
+      </div>
+      <div class="rail-block">
+        <div class="rail-label">Read time</div>
+        <div class="rail-value">{{ content | number_of_words | divided_by: 220 | plus: 1 }} min</div>
+      </div>
+      {% if page.tags %}
+      <div class="rail-block">
+        <div class="rail-label">Topics</div>
+        <div class="rail-tags">
+          {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="rail-block">
+        <div class="rail-label">Author</div>
+        <div class="rail-value">{{ site.author }}</div>
+        <div class="rail-sub">{{ site.role }}</div>
+      </div>
+    </aside>
+
+    <div class="post-body prose">
+      {{ content }}
+
+      <hr>
+      <p class="post-outro">
+        Found this useful? I write about agentic AI and open source.<br>
+        <a href="{{ '/' | relative_url }}">More posts</a> · <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+      </p>
+    </div>
+  </div>
+</article>

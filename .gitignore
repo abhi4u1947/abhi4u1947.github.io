@@ -1,0 +1,34 @@
+# Secrets — never commit
+.env
+.env.local
+
+# direnv local cache (the .envrc itself IS committed; .direnv/ is its working dir)
+.direnv/
+
+# node_modules (Playwright + transitive deps for infographic renderer).
+# Lockfiles are committed; installed deps are not.
+node_modules/
+
+# Claude Code local-only settings (per-machine permissions, prompts cache)
+.claude/settings.local.json
+
+# Jekyll build output
+site/_site/
+site/.jekyll-cache/
+site/.jekyll-metadata
+site/.sass-cache/
+
+# Bundler
+site/.bundle/
+site/vendor/
+
+# Local one-off: backdated post history replay (never commit)
+site/scripts/replay-post-git-history.sh
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
