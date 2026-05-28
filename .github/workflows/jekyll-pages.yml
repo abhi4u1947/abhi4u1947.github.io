@@ -26,14 +26,13 @@ jobs:
           bundler-cache: true
           working-directory: site
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./site
-          destination: ./_site
+      - name: Build site (same as local bundle exec jekyll build)
+        working-directory: site
+        run: bundle exec jekyll build --baseurl ""
 
       - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/_site
 
   deploy:
     needs: build

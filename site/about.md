@@ -10,8 +10,7 @@ description: "Who Abhishek Dadhich is, why this blog exists. What I work on, wha
 
   <div class="about-intro">
     <p class="lead">
-      I'm a Architect and technology leader with 19+ years building large-scale, business-critical systems. Writing on platform engineering, DevSecOps, IAM, supply chain security, observability,
-      and agentic AI from a practitioner's perspective.
+      I'm an architect and technology leader with 19+ years building large-scale, business-critical systems. Writing on platform engineering, DevSecOps, IAM, supply chain security, observability, and agentic AI from a practitioner's perspective.
     </p>
 
     <p>
